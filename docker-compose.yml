@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    image: ddddsafsdfasdfasdf/yagan-backend:1.0
+    container_name: yagan-backend
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./frontend
+    image: ddddsafsdfasdfasdf/yagan-frontend:1.0
+    container_name: yagan-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
